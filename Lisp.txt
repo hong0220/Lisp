@@ -1,0 +1,44 @@
+(define (gao n)
+(do (   (  d (  do (  (i (- n 1) (- i 1))
+
+                         (d '() (cons i d))
+
+                     )
+
+                  条件 返回值
+                  ((< i 0) d)
+
+                  没有逻辑代码
+             )
+
+             变化
+
+             (append (cddr d) (list (car d)))
+        )
+    )
+
+    ((null? (cdr d))     返回值    (car d))
+
+    没有逻辑代码
+)
+)
+
+(defun gao (n)
+  (do ((i (- n 1) (- i 1)) (d '() (cons i d)))
+             ((< i 0) d)
+             (format t "~a ~%" d)
+  )
+)
+(write(gao 3))
+
+(defun gao (n)
+(format t "~a ~%" (append (cddr '(1 2 3 4 5 6)) (list (car '(1 2 3 4 5 6)))))
+)
+(gao 10)
+
+(defun gao (n)
+(format t "~a ~%" (cddr '(1 2 3 4 5 6)))
+)
+(gao 10)
+
+
